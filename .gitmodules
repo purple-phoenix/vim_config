@@ -1,0 +1,3 @@
+[submodule "haskell-vim"]
+	path = haskell-vim
+	url = https://github.com/neovimhaskell/haskell-vim.git
