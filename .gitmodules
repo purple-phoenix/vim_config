@@ -49,3 +49,6 @@
 [submodule "vim-hindent"]
 	path = vim-hindent
 	url = https://github.com/alx741/vim-hindent.git
+[submodule "ale"]
+	path = ale
+	url = https://github.com/dense-analysis/ale.git
