@@ -46,3 +46,9 @@
 [submodule "ultisnips"]
 	path = ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim-snipmate"]
+	path = vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim-hindent"]
+	path = vim-hindent
+	url = https://github.com/alx741/vim-hindent.git
