@@ -55,3 +55,12 @@
 [submodule "vim-fugitive"]
 	path = vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "nerdcommenter"]
+	path = nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "neoformat"]
+	path = neoformat
+	url = https://github.com/sbdchd/neoformat.git
+[submodule "jedi-vim"]
+	path = jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
