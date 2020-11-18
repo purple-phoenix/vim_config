@@ -108,7 +108,7 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 
 
 "Call Neomake
-call neomake#configure#automake('w')
+"Disabled for now using ALE>>>call neomake#configure#automake('w')
 
 "Auto open windows with make issues
 let g:neomake_open_list = 2
@@ -160,16 +160,6 @@ let g:necoghc_enable_detailed_browse = 1
 " Python "
 
 
-"   Neoformat   "
-" Enable alignment
-let g:neoformat_basic_format_align = 1
-
-" Enable tab to space conversion
-let g:neoformat_basic_format_retab = 1
-
-" Enable trimmming of trailing whitespace
-let g:neoformat_basic_format_trim = 1
-
 
 " Use ALE and also some plugin 'foobar' as completion sources for all code.
 call deoplete#custom#option('sources', {
@@ -178,3 +168,10 @@ call deoplete#custom#option('sources', {
 
 let b:ale_fixers = ['black']
 let b:ale_fix_on_save = 1
+
+
+" disable autocompletion, because we use deoplete for completion
+let g:jedi#completions_enabled = 0
+
+" open the go-to function in split, not another buffer
+let g:jedi#use_splits_not_buffers = "right"
