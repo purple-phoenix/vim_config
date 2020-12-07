@@ -1,3 +1,7 @@
+
+call pathogen#infect()
+
+:let maplocalleader = "\\"
 "Basic settings
 syntax on
 filetype plugin indent on
@@ -25,10 +29,6 @@ hi LineNr ctermfg=darkgrey
 "Highlight in bright red when lines go over 80 chars
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-
-
-"Plugin installation
-execute pathogen#infect()
 
 
 "Open NERDTree when nvim starts
@@ -175,3 +175,6 @@ let g:jedi#completions_enabled = 0
 
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
+let g:jedi#goto_command = "<leader>gc"
+let g:jedi#goto_assignments_command = "<leader>ga"
+let g:jedi#goto_definitions_command = "<leader>gd"
