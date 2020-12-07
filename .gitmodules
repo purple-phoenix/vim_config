@@ -64,3 +64,6 @@
 [submodule "auto-pairs"]
 	path = auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
+[submodule "deoplete-jedi"]
+	path = deoplete-jedi
+	url = git@github.com:deoplete-plugins/deoplete-jedi.git
