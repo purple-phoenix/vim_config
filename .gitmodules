@@ -67,3 +67,6 @@
 [submodule "deoplete-jedi"]
 	path = deoplete-jedi
 	url = git@github.com:deoplete-plugins/deoplete-jedi.git
+[submodule "vimspector"]
+	path = vimspector
+	url = git@github.com:puremourning/vimspector.git

@@ -1,4 +1,3 @@
-
 call pathogen#infect()
 
 :let maplocalleader = "\\"
@@ -178,3 +177,22 @@ let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#goto_command = "<leader>gc"
 let g:jedi#goto_assignments_command = "<leader>ga"
 let g:jedi#goto_definitions_command = "<leader>gd"
+
+
+" Debugger"
+
+let g:vimspector_enable_mappings = 'Human'
+nmap <leader>rn :call vimspector#Launch()
+nmap <leader>rs :call vimspector#Restart()
+nmap <leader>ev :VimspectorEval
+nmap <leader>wt :VimspectorWatch
+nmap <leader>so :VimspectorShowOutput
+nmap <leader>bp :call vimspector#ToggleBreakpoint()
+nmap <leader>bf :call vimspector#AddFunctionBreakpoint()
+nmap <leader>st :call vimspector#StepOver()
+nmap <leader>si :call vimspector#StepInto()
+nmap <leader>so :call vimspector#StepOut()
+nmap <leader>vp :call vimspector#Pause()
+nmap <leader>vs :call vimspector#Stop()
+nmap <leader>ct :call vimspector#Continue()
+nmap <leader>rr :VimspectorReset
