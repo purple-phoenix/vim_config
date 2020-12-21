@@ -196,3 +196,31 @@ nmap <leader>vp :call vimspector#Pause()
 nmap <leader>vs :call vimspector#Stop()
 nmap <leader>ct :call vimspector#Continue()
 nmap <leader>rr :VimspectorReset
+
+"JAVA"
+"
+" Tell YCM where to find the plugin. Add to any existing values.
+let g:ycm_java_jdtls_extension_path = [
+  \ '/home/mtmccart/.config/nvim/bundle/vimspector/gadgets/linux'
+  \ ]
+
+let s:jdt_ls_debugger_port = 0
+function! s:StartDebugging()
+  if s:jdt_ls_debugger_port <= 0
+    " Get the DAP port
+    let s:jdt_ls_debugger_port = youcompleteme#GetCommandResponse(
+      \ 'ExecuteCommand',
+      \ 'vscode.java.startDebugSession' )
+
+    if s:jdt_ls_debugger_port == ''
+       echom "Unable to get DAP port - is JDT.LS initialized?"
+       let s:jdt_ls_debugger_port = 0
+       return
+     endif
+  endif
+
+  " Start debugging with the DAP port
+  call vimspector#LaunchWithSettings( { 'DAPPort': s:jdt_ls_debugger_port } )
+endfunction
+
+nmap <leader>ra :call <SID>StartDebugging()<CR>

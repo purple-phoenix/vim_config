@@ -70,3 +70,27 @@
 [submodule "vimspector"]
 	path = vimspector
 	url = git@github.com:puremourning/vimspector.git
+[submodule "vim-lsp"]
+	path = vim-lsp
+	url = git@github.com:prabirshrestha/vim-lsp.git
+[submodule "vim-lsp-settings"]
+	path = vim-lsp-settings
+	url = git@github.com:mattn/vim-lsp-settings.git
+[submodule "eclim"]
+	path = eclim
+	url = git@github.com:ervandew/eclim.git
+[submodule "jdb.vim"]
+	path = jdb.vim
+	url = git@github.com:brookhong/jdb.vim.git
+[submodule "vim-jdb"]
+	path = vim-jdb
+	url = git@github.com:Dica-Developer/vim-jdb.git
+[submodule "vim-vebugger"]
+	path = vim-vebugger
+	url = git@github.com:idanarye/vim-vebugger.git
+[submodule "vimproc.vim"]
+	path = vimproc.vim
+	url = git@github.com:Shougo/vimproc.vim.git
+[submodule "YouCompleteMe"]
+	path = YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe.git
