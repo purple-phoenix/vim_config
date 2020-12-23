@@ -9,8 +9,8 @@ echo "Updating submodules"
 git submodule update --init --recursive
 
 echo "Ensuring system python can import neovim"
-python -m pip install neovim
-python3 -m pip install neovim
+python -m pip install neovim pynvim
+python3 -m pip install neovim pynvim
 
 echo "Installing YouCompleteMe dependencies"
 if [[ "$DISTRO" == "Ubuntu" ]]; then
