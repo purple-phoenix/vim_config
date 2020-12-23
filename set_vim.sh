@@ -6,7 +6,7 @@ echo "Downloading pathogen from github"
 wget https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim -O ~/.config/nvim/autoload/pathogen.vim
 
 echo "Updating submodules"
-git submodule update --init --recursive
+cd .config/nvim/bundle && git submodule update --init --recursive
 
 echo "Installing YouCompleteMe dependencies"
 if [[ "$DISTRO" == "Ubuntu" ]]; then
