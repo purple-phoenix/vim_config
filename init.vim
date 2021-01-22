@@ -157,16 +157,15 @@ let g:necoghc_enable_detailed_browse = 1
 
 
 " Python "
-
-
+let g:python3_host_prog = "/usr/bin/python3"
+let g:python_host_prog = "/usr/bin/python2"
 
 " Use ALE and also some plugin 'foobar' as completion sources for all code.
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\})
+call deoplete#custom#option('sources', { '_': ['ale'],})
 
-let b:ale_fixers = ['black']
-let b:ale_fix_on_save = 1
+let g:ale_fixers = {'python': ['black']}
+let g:ale_fix_on_save = 1
+let g:ale_linters = {'python': ["flake8", "pylint"]}
 
 
 " disable autocompletion, because we use deoplete for completion
@@ -182,6 +181,9 @@ let g:jedi#goto_definitions_command = "<leader>gd"
 " Debugger"
 
 let g:vimspector_enable_mappings = 'Human'
+
+let g:vimspector_base_dir=expand( '$HOME/.config/nvim/bundle' )
+
 nmap <leader>rn :call vimspector#Launch()
 nmap <leader>rs :call vimspector#Restart()
 nmap <leader>ev :VimspectorEval
@@ -224,3 +226,16 @@ function! s:StartDebugging()
 endfunction
 
 nmap <leader>ra :call <SID>StartDebugging()<CR>
+
+
+" Disable auto-detection of virtualenvironments
+let g:ale_virtualenv_dir_names = []
+" Environment variable ${VIRTUAL_ENV} is always used
+"
+let g:ale_python_pylint_change_directory=0
+let g:ale_python_flake8_change_directory=0
+let g:ale_python_auto_pipenv = 1
+
+
+" Remap escape to exit terminal
+:tnoremap <Esc> <C-\><C-n>:buffer #<CR>

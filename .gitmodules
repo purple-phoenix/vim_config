@@ -94,3 +94,12 @@
 [submodule "YouCompleteMe"]
 	path = YouCompleteMe
 	url = git@github.com:ycm-core/YouCompleteMe.git
+[submodule "vim-virtualenv"]
+	path = vim-virtualenv
+	url = git@github.com:jmcantrell/vim-virtualenv.git
+[submodule "vim-conda"]
+	path = vim-conda
+	url = https://github.com/cjrh/vim-conda
+[submodule "fzf.vim"]
+	path = fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
