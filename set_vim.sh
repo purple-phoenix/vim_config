@@ -21,3 +21,4 @@ echo "Building YouCompleteMe"
 python3 ~/.config/nvim/bundle/YouCompleteMe/install.py --all
 
 cp ./init.vim $HOME/.config/nvim/init.vim
+cp ./.vimspector.json $HOME/git/.vimspector.json
