@@ -157,7 +157,7 @@ let g:necoghc_enable_detailed_browse = 1
 
 
 " Python "
-let g:python3_host_prog = "/usr/bin/python3"
+let g:python3_host_prog = "$HOME/anaconda3/bin/python3"
 let g:python_host_prog = "/usr/bin/python2"
 
 " Use ALE and also some plugin 'foobar' as completion sources for all code.
@@ -165,7 +165,7 @@ call deoplete#custom#option('sources', { '_': ['ale'],})
 
 let g:ale_fixers = {'python': ['black']}
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'python': ["flake8", "pylint"]}
+let g:ale_linters = {'python': ["pylint"]}
 
 
 " disable autocompletion, because we use deoplete for completion
