@@ -70,8 +70,8 @@ let g:cabal_indent_section = 2
 au BufWritePost *.hs InteroReload
 
 " Lookup the type of expression under the cursor
-au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
-au FileType haskell nmap <silent> <leader>T <Plug>InteroType
+"au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
+"au FileType haskell nmap <silent> <leader>T <Plug>InteroType
 " Insert type declaration
 au FileType haskell nnoremap <silent> <leader>ni :InteroTypeInsert<CR>
 " Show info about expression or type under the cursor
@@ -105,6 +105,8 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
+"Terminal keybinding
+nnoremap <silent> <leader>tm :split <bar> terminal
 
 "Call Neomake
 "Disabled for now using ALE>>>call neomake#configure#automake('w')
@@ -165,7 +167,7 @@ call deoplete#custom#option('sources', { '_': ['ale'],})
 
 let g:ale_fixers = {'python': ['black']}
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'python': ["pylint"]}
+let g:ale_linters = {'python': ["pylint", "mypy"]}
 
 
 " disable autocompletion, because we use deoplete for completion
