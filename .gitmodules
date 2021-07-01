@@ -103,3 +103,6 @@
 [submodule "fzf.vim"]
 	path = fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule "vim-instant-markdown"]
+	path = vim-instant-markdown
+	url = git@github.com:instant-markdown/vim-instant-markdown.git
