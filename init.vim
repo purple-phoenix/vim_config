@@ -24,12 +24,6 @@ hi Comment ctermfg=2*
 hi Normal ctermbg=none
 hi LineNr ctermfg=darkgrey
 
-
-"Highlight in bright red when lines go over 80 chars
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
-
-
 "Open NERDTree when nvim starts
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
