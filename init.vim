@@ -159,6 +159,7 @@ let g:python_host_prog = "/usr/bin/python2"
 " Use ALE and also some plugin 'foobar' as completion sources for all code.
 call deoplete#custom#option('sources', { '_': ['ale'],})
 
+let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:ale_fixers = {'python': ['black']}
 let g:ale_fix_on_save = 1
 let g:ale_linters = {'python': ["pylint", "mypy"]}
@@ -235,3 +236,8 @@ let g:ale_python_auto_pipenv = 1
 
 " Remap escape to exit terminal
 :tnoremap <Esc> <C-\><C-n>:buffer #<CR>
+
+"Macros
+" Swap left and right words around this pivot
+let @s='bdwwPldwbbPl'
+
