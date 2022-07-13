@@ -234,10 +234,11 @@ let g:ale_python_flake8_change_directory=0
 let g:ale_python_auto_pipenv = 1
 
 
-" Remap escape to exit terminal
-:tnoremap <Esc> <C-\><C-n>:buffer #<CR>
 
 "Macros
 " Swap left and right words around this pivot
 let @s='bdwwPldwbbPl'
 
+
+"FZF"
+nnoremap <silent> <C-f> :Files<CR>
